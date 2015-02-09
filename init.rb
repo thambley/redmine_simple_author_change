@@ -1,6 +1,6 @@
 require 'redmine'
 
-Redmine::Plugin.register :simple_author_change do
+Redmine::Plugin.register :redmine_simple_author_change do
   name 'Simple Author Change plugin'
   author 'Dominik Staskiewicz'
   description 'This is a simplest way of changing an author I can think of'
@@ -13,4 +13,4 @@ Redmine::Plugin.register :simple_author_change do
   end
 end
 
-require 'simple_author_change'
+require 'redmine_simple_author_change'

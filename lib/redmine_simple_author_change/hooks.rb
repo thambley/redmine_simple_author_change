@@ -1,4 +1,4 @@
-module SimpleAuthorChange
+module RedmineSimpleAuthorChange
   class Hooks < Redmine::Hook::ViewListener
     render_on :view_issues_form_details_top, :partial => 'issues/simple_author_change'
 
