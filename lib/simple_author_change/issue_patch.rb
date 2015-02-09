@@ -1,4 +1,4 @@
-require 'issue'
+require_dependency 'issue'
 
 module SimpleAuthorChange
   module IssuePatch
@@ -8,4 +8,8 @@ module SimpleAuthorChange
       end
     end
   end
+end
+
+unless Issue.included_modules.include?(SimpleAuthorChange::IssuePatch)
+  Issue.send(:include, SimpleAuthorChange::IssuePatch)
 end
