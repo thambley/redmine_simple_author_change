@@ -8,8 +8,10 @@ module RedmineSimpleAuthorChange
       case detail.property
       when 'attr'
         if detail.prop_key == 'author_id'
-          detail[:value] = User.find detail.value 
-          detail[:old_value] = User.find detail.old_value
+          if detail.value.to_s.match(/^\d+$/)
+            detail[:value] = User.find detail.value 
+            detail[:old_value] = User.find detail.old_value
+          end
         end
       end
     end
